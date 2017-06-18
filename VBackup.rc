@@ -36,8 +36,8 @@ IDI_VBACKUP             ICON                    "VBackup.ico"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,0,7,0
- PRODUCTVERSION 0,0,7,0
+ FILEVERSION 0,0,8,0
+ PRODUCTVERSION 0,0,8,0
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -54,12 +54,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Charles Prineas"
             VALUE "FileDescription", "VBackup"
-            VALUE "FileVersion", "0, 0, 7, 0"
+            VALUE "FileVersion", "0, 0, 8, 0"
             VALUE "InternalName", "VBackup"
-            VALUE "LegalCopyright", "Copyright © 2010-2015, Charles Prineas"
+            VALUE "LegalCopyright", "Copyright © 2010-2017, Charles Prineas"
             VALUE "OriginalFilename", "VBackup.exe"
             VALUE "ProductName", "VBackup"
-            VALUE "ProductVersion", "Version 0.7"
+            VALUE "ProductVersion", "Version 0.8"
         END
     END
     BLOCK "VarFileInfo"
@@ -72,13 +72,51 @@ END
 /////////////////////////////////////////////////////////////////////////////
 
 
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
 #ifndef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
 //
 // Generated from the TEXTINCLUDE 3 resource.
 //
 
-
+S
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
 

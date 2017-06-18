@@ -1,5 +1,5 @@
 //*****************************************
-// Copyright (c) 2010-2015 Charles Prineas
+// Copyright (c) 2010-2017 Charles Prineas
 //
 // Released under MIT License
 // See LICENSE file for details
@@ -11,6 +11,7 @@
 // 12 NOV 2010	0.6			Fixed problem where error message was displayed - even when using /RP:
 //							GetBackupSet did not handle y/n keys! We now call GetYesNo.
 // 22 DEC 2010  0.7			/RP: called SetFlag instead of SetRestore (which meant we had to also include /r to do a restore)
+// 13 JUN 2017	0.8			Modified CTools::CreateDirectoryRecursive so it worked on UNCs
 //************************************************************************************************
 
 #include "stdafx.h"
@@ -1901,7 +1902,7 @@ int Help()
 //********
 {
 	PRINTF(_T("%s %s (Freeware)\n"), PROGRAM_NAME, ProgramVersion());
-    printf("Copyright (c) 2010-2015 Charles Prineas. All Rights Reserved.\n\n");
+    printf("Copyright (c) 2010-2017 Charles Prineas. All Rights Reserved.\n\n");
 	PRINTF(_T("Usage:   %s Source Destination [options]\n\n"), PROGRAM_NAME);
 	printf("           Source   The directory to back up\n");
 	printf("      Destination   The directory where Source will be backed up to\n");
