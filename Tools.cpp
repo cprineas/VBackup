@@ -380,6 +380,14 @@ int CreateDirectoryRecursive(LPTSTR pszDirectory, LPTSTR pszCopyAttributes=NULL)
 	{
 		// UNC - skip "\\"
 		pszNext += 2;
+
+		// Following added in V0.8 (13-JUN-2017) after a user reported that we could not backup to a UNC (eg, \\Server\Folder)
+		// We now need to jump over the server name and find the root folder
+		psz = STRSTR(pszNext, _T("\\"));
+
+		// If we don't find another "\", CreateDirectoryRecursive will fail trying to create \\Server (instead of \\Server\Folder)
+		if (psz)
+			pszNext = ++psz;
 	}
 	else
 
